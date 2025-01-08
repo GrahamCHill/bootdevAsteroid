@@ -31,9 +31,15 @@ def main():
             update.update(dt)
         for draw in drawable:
             draw.draw(screen)
+        for rock in asteroids:
+            if player.collide(rock):
+                pygame.quit()
+                print("Game over!")
+                return
         dt = clock.tick(60) / 1000.0
         pygame.display.flip()
 
+    pygame.quit()
 
 if __name__ == "__main__":
     main()
