@@ -7,7 +7,6 @@ import constants
 
 # Base class for game objects
 class Player(circleshape.CircleShape):
-    containers = (pygame.sprite.Group(), pygame.sprite.Group())
 
     def __init__(self, x, y):
         circleshape.CircleShape.__init__(self, x, y, constants.PLAYER_RADIUS)
